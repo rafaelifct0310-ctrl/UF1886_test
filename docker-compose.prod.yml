@@ -50,6 +50,9 @@ services:
     image: apache/hop:2.17.0
     container_name: hop-prod
     restart: unless-stopped
+    environment:
+      HOP_SERVER_USER: admin
+      HOP_SERVER_PASS: admin
     ports:
       - "8082:8080"
     volumes:

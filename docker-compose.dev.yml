@@ -49,6 +49,9 @@ services:
   hop:
     image: apache/hop:2.17.0
     container_name: hop-dev
+    environment:
+      HOP_SERVER_USER: admin
+      HOP_SERVER_PASS: admin
     restart: unless-stopped
     ports:
       - "8080:8080"
