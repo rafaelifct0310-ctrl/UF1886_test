@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <template id="report_saleorder_document_inherit_codes"
+             inherit_id="sale.report_saleorder_document">
+
+       <!-- Añadir cabecera de columnas -->
+       <xpath expr="//table[contains(@class,'table')]/thead/tr/th[1]" position="after">
+           <th>Referencia Interna</th>
+           <th>Código de Barras</th>
+       </xpath>
+
+       <!-- Añadir valores en cada línea del pedido -->
+       <xpath expr="//table[contains(@class,'table')]/tbody/tr/td[1]" position="after">
+           <td>
+               <span t-field="line.product_id.default_code"/>
+           </td>
+           <td>
+               <span t-field="line.product_id.barcode"/>
+           </td>
+       </xpath>
+
+   </template>
+</odoo>
