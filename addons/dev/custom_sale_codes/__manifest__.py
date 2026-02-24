@@ -2,9 +2,9 @@
     "license": "LGPL-3",
     "name":"Personalización de formato de ventas",
     "data":[
-        "views/sale_report.xml"
+        "views/sale_report.xml",
     ],
     "depends":[
-        "sale"
+        "sale",
     ]
 }
